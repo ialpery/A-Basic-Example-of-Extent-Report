@@ -21,7 +21,7 @@ public abstract class TestBaseReport {
         extentReports = new ExtentReports();
 
         String date = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
-        String filePath = System.getProperty("user.dir") + "/test-output/Rapor"+date+".html";
+        String filePath = System.getProperty("user.dir") + "/test-output/Report"+date+".html";
 
         extentHtmlReporter = new ExtentHtmlReporter(filePath);
         extentReports.attachReporter(extentHtmlReporter);

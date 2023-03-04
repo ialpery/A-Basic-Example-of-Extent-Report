@@ -19,7 +19,7 @@ public class AmazonPage {
     @FindBy(xpath = "//div[@class='a-section a-spacing-small a-spacing-top-small']")
     public WebElement resultSearchingText;
 
-    @FindBy(xpath = "(//div[@class='a-section a-spacing-base'])[1]//h2")
+    @FindBy(xpath = "(//div[@class='a-section aok-relative s-image-square-aspect'])[1]")
     public WebElement firstSearchingResult;
 
     @FindBy(xpath = "//i[@title='Share']")
