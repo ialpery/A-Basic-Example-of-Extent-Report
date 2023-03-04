@@ -19,7 +19,7 @@ public class AmazonTest extends TestBaseReport {
         Driver.getDriver().get(ConfigReader.getProperty("amazonUrl"));
 
         Assert.assertTrue(Driver.getDriver().getTitle().contains("Amazon"));
-        extentTest.info("Correctly navigated to the Amazon page");
+        extentTest.pass("Correctly navigated to the Amazon page");
 
 
         AmazonPage amazonPages = new AmazonPage();
@@ -28,20 +28,19 @@ public class AmazonTest extends TestBaseReport {
         extentTest.info("Java word was typed and searched");
 
         Assert.assertTrue(amazonPages.resultSearchingText.getText().contains("Java"));
-        extentTest.info("Search results contain 'Java'");
-
+        extentTest.pass("Search results contain 'Java'");
 
         amazonPages.firstSearchingResult.click();
         extentTest.info("The first sample was clicked");
 
         Assert.assertTrue(amazonPages.shareButton.isDisplayed());
-        extentTest.info("Share button is appeared");
+        extentTest.pass("Share button is appeared");
 
         amazonPages.addToCartButton.click();
         extentTest.info("The sample was added to cart");
 
         Assert.assertEquals(amazonPages.addedToCartText.getText(), "Added to Cart");
-        extentTest.info("'Added to Cart' text was appeared");
+        extentTest.pass("'Added to Cart' text was appeared");
 
         Driver.closeDriver();
         extentTest.pass("Test Completed");
